@@ -1,4 +1,7 @@
 
+import { Link } from 'react-router-dom';
+
+
 function Signup() {
     
 
@@ -24,7 +27,8 @@ function Signup() {
                 <input type="password" className="form-control"/>
             </div>
 
-            <button>Signup</button>            
+            <button>Signup</button>        
+            <Link to="/">Already have an account? </Link> 
         </form>
     )
 }
