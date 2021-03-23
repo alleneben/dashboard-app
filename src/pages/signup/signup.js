@@ -1,9 +1,11 @@
 
 import { Link } from 'react-router-dom';
+import { useContextStore } from '../../store/context';
 
 
 function Signup() {
-    
+    const { name } = useContextStore();
+    console.log(name);
 
     return (
         <form>
