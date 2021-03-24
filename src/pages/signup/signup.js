@@ -1,12 +1,14 @@
 
 import { Link } from 'react-router-dom';
-import { useContextStore } from '../../store/context';
+import { useAppContext } from '../../store/context';
 
 
 function Signup() {
-    const { name } = useContextStore();
-    console.log(name);
 
+
+    const { state, dispatch } = useAppContext()
+
+    console.log(state);
     return (
         <form>
             <div className="form-group">

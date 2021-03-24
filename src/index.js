@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import { DataStoreProvider } from './store/context'
+import { AppProvider } from './store/context'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-      <DataStoreProvider>
+      <AppProvider>
       <BrowserRouter>
           <App />
       </BrowserRouter>
-      </DataStoreProvider>
+      </AppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

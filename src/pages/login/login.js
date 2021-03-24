@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { useContextStore } from '../../store/context';
+import { useAppContext } from '../../store/context';
 
 
 function Login() {
     let history  = useHistory()
+    const { state, dispatch } = useAppContext()
 
-    const { name } = useContextStore()
+    console.log(state);
 
-    console.log(name)
+
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -36,7 +37,7 @@ function Login() {
         } else {
             // stay on login page
             setMessage("wrong username or password")
-            setIsLoading(false)
+            // setIsLoading(false)
         }
 
     }
