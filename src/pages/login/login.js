@@ -6,9 +6,9 @@ import { useAppContext } from '../../store/context';
 
 function Login() {
     let history  = useHistory()
-    const { state, dispatch } = useAppContext()
+    // const { brandname } = useAppContext()
 
-    console.log(state);
+    const brandname = "Whizzy Academy"
 
 
 
@@ -44,6 +44,7 @@ function Login() {
 
     return (
         <form>
+            <h1>{ brandname }</h1>
             {message && <h1 style={{color:"red"}}>{message}</h1>}
             {isLoading && <div>loading ....</div>}
             <div className="form-group">

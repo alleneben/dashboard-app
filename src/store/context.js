@@ -20,9 +20,11 @@ const reducer = (state,action) => {
 
 const AppProvider = (props) => {
     const [state, dispatch] = useReducer(reducer,initialState)
+    const brandname = "Whizz Academy"
 
+    
     return (
-        <AppContext.Provider value={{state, dispatch,sum}}>
+        <AppContext.Provider value={{state, dispatch, brandname}}>
             { props.children }
         </AppContext.Provider>
     )

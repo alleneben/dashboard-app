@@ -6,11 +6,12 @@ import { useAppContext } from '../../store/context';
 function Signup() {
 
 
-    const { state, dispatch } = useAppContext()
+    const { state, dispatch, brandname } = useAppContext()
 
-    console.log(state);
+    // console.log(state);
     return (
         <form>
+            <h1>{ brandname }</h1>
             <div className="form-group">
                 <label>Username</label>
                 <input type="text" className="form-control"/>
